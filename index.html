@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Budget Tracker</title>
+    <title>Pocket Budget Tracker</title>
     <!-- Tailwind Connection -->
     <script src="https://cdn.tailwindcss.com"></script>
     <!-- Custom CSS -->
@@ -13,7 +13,101 @@
 </head>
 
 <body>
+    <!-- Start Heading Section -->
+    <header>
+        <h1 class="text-4xl text-center mt-7 text-teal-600 font-bold">Pocket Budget Tracker</h1>
+    </header>
 
+    <!-- Main Part -->
+    <main class="container mx-auto mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+        <!-- photo section -->
+        <section>
+            <img class="rounded-lg" src="./Images/53402.jpg" alt="Photo of money Savings">
+        </section>
+
+        <!-- Money Calculation section -->
+        <section class="bg-gray-50 h-full rounded-lg p-7 text-center">
+
+            <!-- Income and expense section -->
+            <section>
+                <!-- Income partition -->
+                <div>
+                    <h4 class="text-2xl font-semibold mb-5">Income</h4>
+                    <div class="flex">
+                        <div class="w-2/5">
+                            <h5 class="text-xl text-right font-semibold">Food:</h5>
+                        </div>
+                        <div class="w-3/5 text-left">
+                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Expenses partition -->
+                <div class="mt-6">
+                    <h4 class="text-2xl font-semibold mb-5">Expenses</h4>
+
+                    <!-- Food expense -->
+                    <div class="flex mb-4">
+                        <div class="w-2/5">
+                            <h5 class="text-xl text-right font-semibold">Food:</h5>
+                        </div>
+                        <div class="w-3/5 text-left">
+                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                        </div>
+                    </div>
+
+                    <!-- Rent Expense -->
+                    <div class="flex mb-4">
+                        <div class="w-2/5">
+                            <h5 class="text-xl text-right font-semibold">Rent:</h5>
+                        </div>
+                        <div class="w-3/5 text-left">
+                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                        </div>
+                    </div>
+
+                    <!-- Clothes Expense -->
+                    <div class="flex mb-5">
+                        <div class="w-2/5">
+                            <h5 class="text-xl text-right font-semibold">Clothes:</h5>
+                        </div>
+                        <div class="w-3/5 text-left">
+                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                        </div>
+                    </div>
+                </div>
+                <button class="text-xl font-semibold text-white bg-blue-400 rounded-md px-10 py-2">Calculate</button>
+
+                <!-- Expense and Balance Calculation partition -->
+                <h3 class="my-5 text-2xl font-semibold">
+                    Total Expense: <span></span>
+                </h3>
+                <h3 class="my-5 text-2xl font-semibold">
+                    Balance: <span></span>
+                </h3>
+            </section>
+
+            <!-- Savings Section -->
+            <section class="mt-10">
+                <div class="mb-10">
+                    <h5 class="text-xl text-right inline-block font-semibold">Save:</h5>
+                    <input type="text" class="mx-3 bg-gray-200 text-xl px-3 py-1 rounded-md w-28">
+                    <span>%</span>
+                    <button
+                        class="text-xl font-semibold text-white bg-blue-400 rounded-md px-10 py-1 ml-3">Save</button>
+                </div>
+
+                <h3 class="my-5 text-2xl font-semibold">
+                    Savings Amount: <span></span>
+                </h3>
+                <h3 class="my-5 text-2xl font-semibold">
+                    Remaining Balance: <span></span>
+                </h3>
+            </section>
+
+        </section>
+    </main>
 
     <!-- Custom JS -->
     <script src="./JS/app.js"></script>
