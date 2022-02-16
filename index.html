@@ -15,18 +15,20 @@
 <body>
     <!-- Start Heading Section -->
     <header>
-        <h1 class="text-4xl text-center mt-7 text-teal-600 font-bold">Pocket Budget Tracker</h1>
+        <h1 class="text-4xl md:text-5xl text-center mt-8 text-teal-600 font-bold">Pocket Budget Tracker</h1>
     </header>
 
     <!-- Main Part -->
-    <main class="container mx-auto mt-8 grid grid-cols-1 lg:grid-cols-2 gap-8">
+    <main class="container mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 mb-14 p-4 sm:p-7">
         <!-- photo section -->
-        <section>
-            <img class="rounded-lg" src="./Images/53402.jpg" alt="Photo of money Savings">
+        <section class="mx-auto flex items-center" id="image-background">
+            <div>
+                <img class="rounded-lg" src="./Images/53402Re.jpg" alt="Photo of money Savings">
+            </div>
         </section>
 
         <!-- Money Calculation section -->
-        <section class="bg-gray-50 h-full rounded-lg p-7 text-center">
+        <section class="bg-gray-50 rounded-lg p-7 text-center w-full mx-auto">
 
             <!-- Income and expense section -->
             <section>
@@ -35,10 +37,10 @@
                     <h4 class="text-2xl font-semibold mb-5">Income</h4>
                     <div class="flex">
                         <div class="w-2/5">
-                            <h5 class="text-xl text-right font-semibold">Food:</h5>
+                            <h5 class="text-xl text-right font-semibold">Income:</h5>
                         </div>
                         <div class="w-3/5 text-left">
-                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                            <input type="text" class="ml-3 w-5/6 bg-gray-200 text-xl px-3 py-1 rounded-md">
                         </div>
                     </div>
                 </div>
@@ -53,7 +55,7 @@
                             <h5 class="text-xl text-right font-semibold">Food:</h5>
                         </div>
                         <div class="w-3/5 text-left">
-                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                            <input type="text" class="ml-3 w-5/6 bg-gray-200 text-xl px-3 py-1 rounded-md">
                         </div>
                     </div>
 
@@ -63,7 +65,7 @@
                             <h5 class="text-xl text-right font-semibold">Rent:</h5>
                         </div>
                         <div class="w-3/5 text-left">
-                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                            <input type="text" class="ml-3 w-5/6 bg-gray-200 text-xl px-3 py-1 rounded-md">
                         </div>
                     </div>
 
@@ -73,7 +75,7 @@
                             <h5 class="text-xl text-right font-semibold">Clothes:</h5>
                         </div>
                         <div class="w-3/5 text-left">
-                            <input type="text" class="ml-3 bg-gray-200 text-xl px-3 py-1 rounded-md">
+                            <input type="text" class="ml-3 w-5/6 bg-gray-200 text-xl px-3 py-1 rounded-md">
                         </div>
                     </div>
                 </div>
@@ -92,10 +94,10 @@
             <section class="mt-10">
                 <div class="mb-10">
                     <h5 class="text-xl text-right inline-block font-semibold">Save:</h5>
-                    <input type="text" class="mx-3 bg-gray-200 text-xl px-3 py-1 rounded-md w-28">
+                    <input type="text" class="mx-1 sm:mx-3 bg-gray-200 text-xl px-3 py-1 rounded-md w-20 sm:w-28">
                     <span>%</span>
                     <button
-                        class="text-xl font-semibold text-white bg-blue-400 rounded-md px-10 py-1 ml-3">Save</button>
+                        class="text-xl font-semibold text-white bg-blue-400 rounded-md px-10 py-1 ml-3 mt-5 sm:mt-0">Save</button>
                 </div>
 
                 <h3 class="my-5 text-2xl font-semibold">
