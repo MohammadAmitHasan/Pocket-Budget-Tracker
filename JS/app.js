@@ -114,7 +114,8 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const savingsPercentageValidation = numberValidation(savingsPercentage, 'Saving Percentage field');
 
     if (savingsPercentageValidation) {
-        const savingsAmount = getIncome() * savingsPercentage * 0.01;
+        let savingsAmount = getIncome() * savingsPercentage * 0.01;
+        savingsAmount = parseFloat(savingsAmount.toFixed(2));
         if (balance >= savingsAmount) {
             const reamingBalance = balance - savingsAmount;
             // display savings amount
