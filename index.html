@@ -20,8 +20,9 @@
 
     <!-- Main Part -->
     <main class="container mx-auto mt-10 grid grid-cols-1 lg:grid-cols-2 gap-6 mb-14 p-4 sm:p-7">
+
         <!-- photo section -->
-        <section class="mx-auto flex items-center" id="image-background">
+        <section class="mx-auto flex items-center rounded-lg" id="image-background">
             <div>
                 <img class="rounded-lg" src="./Images/53402Re.jpg" alt="Photo of money Savings">
             </div>
@@ -86,6 +87,11 @@
                 <button id="calculate-btn"
                     class="text-xl font-semibold text-white bg-blue-400 rounded-md px-10 py-2">Calculate</button>
 
+                <!-- error message position 1 -->
+                <div id="error-msg1" class="p-5 bg-red-200 my-5 rounded-lg text-xl font-semibold hidden">
+
+                </div>
+
                 <!-- Expense and Balance Calculation partition -->
                 <h3 class="my-5 text-2xl font-semibold">
                     Total Expense: <span id="total-expense"></span>
@@ -98,6 +104,7 @@
             <!-- Savings Section -->
             <section class="mt-10">
                 <div class="mb-10">
+
                     <h5 class="text-xl text-right inline-block font-semibold">Save:</h5>
                     <input id="savings-percentage-input" type="text"
                         class="mx-1 sm:mx-3 bg-gray-200 text-xl px-3 py-1 rounded-md w-20 sm:w-28">
@@ -113,8 +120,8 @@
                     Remaining Balance: <span id="remaining-amount"></span>
                 </h3>
             </section>
-
         </section>
+
     </main>
 
     <!-- Custom JS -->
