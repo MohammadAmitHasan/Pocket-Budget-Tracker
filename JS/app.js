@@ -56,8 +56,6 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
             }
         }
     }
-
-
 });
 
 // Handle Save button event
@@ -65,10 +63,22 @@ document.getElementById('save-btn').addEventListener('click', function () {
     const savingsPercentage = getInputNumber('savings-percentage-input');
     const balance = parseFloat(document.getElementById('balance').innerText);
 
-    const savingsAmount = getIncome() * savingsPercentage * 0.01;
-    const reamingBalance = balance - savingsAmount;
 
-    // display savings amount
-    document.getElementById('savings-amount').innerText = savingsAmount;
-    document.getElementById('remaining-amount').innerText = reamingBalance;
+    const savingsPercentageValidation = numberValidation(savingsPercentage, 'Saving Percentage field');
+    if (savingsPercentageValidation) {
+        const savingsAmount = getIncome() * savingsPercentage * 0.01;
+        if (balance >= savingsAmount) {
+            const reamingBalance = balance - savingsAmount;
+            // display savings amount
+            document.getElementById('savings-amount').innerText = savingsAmount;
+            document.getElementById('remaining-amount').innerText = reamingBalance;
+
+            // Remove Error message field
+            document.getElementById('error-msg1').style.display = 'none';
+        }
+        else {
+            document.getElementById('error-msg1').innerText = "You haven't enough money to save That much";
+            document.getElementById('error-msg1').style.display = 'block';
+        }
+    }
 });
