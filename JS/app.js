@@ -10,10 +10,16 @@ function getIncome() {
     return getInputNumber('income-input');
 }
 
-// Clear Total expense and balance field
-function clearBalanceExpense() {
+// Clear result fields
+function clearIncomeExpensesResults() {
     document.getElementById('total-expense').innerText = '';
     document.getElementById('balance').innerText = '';
+
+}
+
+function clearSavingsResults() {
+    document.getElementById('savings-amount').innerText = '';
+    document.getElementById('remaining-amount').innerText = '';
 }
 
 // Remove error message
@@ -32,12 +38,10 @@ function getError(message) {
 function numberValidation(inputValue, fieldName) {
     if (isNaN(inputValue) == true) {
         getError('Please provide number value in ' + fieldName);
-        clearBalanceExpense();
         return false
     }
     else if (inputValue < 0) {
         getError('Please provide positive value in ' + fieldName);
-        clearBalanceExpense();
         return false
     }
     else {
@@ -68,7 +72,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
                 if (clotheExpenseValidity) {
 
                     const totalExpenses = foodExpense + rentExpense + clotheExpense;
-                    if (getIncome() > totalExpenses) {
+                    if (getIncome() >= totalExpenses) {
                         const balance = getIncome() - totalExpenses;
                         // Display the total expense and total cost
                         document.getElementById('total-expense').innerText = totalExpenses;
@@ -77,10 +81,28 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
                     }
                     else {
                         getError("You haven't enough money for your expenses");
+                        clearIncomeExpensesResults();
+                        clearSavingsResults();
                     }
                 }
+                else {
+                    clearIncomeExpensesResults();
+                    clearSavingsResults();
+                }
+            }
+            else {
+                clearIncomeExpensesResults();
+                clearSavingsResults();
             }
         }
+        else {
+            clearIncomeExpensesResults();
+            clearSavingsResults();
+        }
+    }
+    else {
+        clearIncomeExpensesResults;
+        clearSavingsResults();
     }
 });
 
@@ -103,9 +125,11 @@ document.getElementById('save-btn').addEventListener('click', function () {
             removeError();
         }
         else {
-            document.getElementById('savings-amount').innerText = '';
-            document.getElementById('remaining-amount').innerText = '';
+            clearSavingsResults();
             getError("You haven't enough money to save That much");
         }
+    }
+    else {
+        clearSavingsResults();
     }
 });
