@@ -10,13 +10,13 @@ function getIncome() {
     return getInputNumber('income-input');
 }
 
-// Clear result fields
+// Clear income and expenses result fields
 function clearIncomeExpensesResults() {
     document.getElementById('total-expense').innerText = '';
     document.getElementById('balance').innerText = '';
-
 }
 
+// clear savings result fields
 function clearSavingsResults() {
     document.getElementById('savings-amount').innerText = '';
     document.getElementById('remaining-amount').innerText = '';
@@ -70,7 +70,7 @@ document.getElementById('calculate-btn').addEventListener('click', function () {
                 const clotheExpenseValidity = numberValidation(clotheExpense, 'Clothes Expense field');
 
                 if (clotheExpenseValidity) {
-
+                    // Calculate total expenses
                     const totalExpenses = foodExpense + rentExpense + clotheExpense;
                     if (getIncome() >= totalExpenses) {
                         const balance = getIncome() - totalExpenses;
